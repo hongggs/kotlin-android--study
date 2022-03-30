@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav"
+    app:startDestination="@id/foodFragment">
+
+    <fragment
+        android:id="@+id/foodFragment"
+        android:name="com.hong.myfirstkotlinproject.FoodFragment"
+        android:label="fragment_food"
+        tools:layout="@layout/fragment_food" >
+        <action
+            android:id="@+id/action_foodFragment_to_diceFragment"
+            app:destination="@id/diceFragment" />
+        <action
+            android:id="@+id/action_foodFragment_to_infoFragment"
+            app:destination="@id/infoFragment" />
+        <action
+            android:id="@+id/action_foodFragment_to_memoFragment"
+            app:destination="@id/memoFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/diceFragment"
+        android:name="com.hong.myfirstkotlinproject.DiceFragment"
+        android:label="DiceFragment" >
+        <action
+            android:id="@+id/action_diceFragment_to_foodFragment"
+            app:destination="@id/foodFragment" />
+        <action
+            android:id="@+id/action_diceFragment_to_infoFragment"
+            app:destination="@id/infoFragment" />
+        <action
+            android:id="@+id/action_diceFragment_to_memoFragment"
+            app:destination="@id/memoFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/infoFragment"
+        android:name="com.hong.myfirstkotlinproject.InfoFragment"
+        android:label="fragment_info"
+        tools:layout="@layout/fragment_info" >
+        <action
+            android:id="@+id/action_infoFragment_to_memoFragment"
+            app:destination="@id/memoFragment" />
+        <action
+            android:id="@+id/action_infoFragment_to_diceFragment"
+            app:destination="@id/diceFragment" />
+        <action
+            android:id="@+id/action_infoFragment_to_foodFragment"
+            app:destination="@id/foodFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/memoFragment"
+        android:name="com.hong.myfirstkotlinproject.MemoFragment"
+        android:label="fragment_memo"
+        tools:layout="@layout/fragment_memo" >
+        <action
+            android:id="@+id/action_memoFragment_to_foodFragment"
+            app:destination="@id/foodFragment" />
+        <action
+            android:id="@+id/action_memoFragment_to_diceFragment"
+            app:destination="@id/diceFragment" />
+        <action
+            android:id="@+id/action_memoFragment_to_infoFragment"
+            app:destination="@id/infoFragment" />
+    </fragment>
+</navigation>
